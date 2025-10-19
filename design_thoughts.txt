@@ -1,0 +1,15 @@
+# The binary tree is intuitive to me and it works the way that I expect it would.  It fits for our doctor problem because it 
+# fundamentally models hierarchy.  It is limited in the manner that it only allows two reports for any doctor.  I expect in 
+# many real world cases that we would need more sibling nodes to model the hierarchy.  The different traversal routines allow 
+# the data to be retrieved for specific functions.  Preorder starts with the parent and then the children.  This can be used 
+# when you need to start at the top and work down for operations like a copy.  Postorder takes care of the children first 
+# and then the parents so it's good when you need to work from the bottom to the top like a delete.  The inorder method models 
+# the actual value and order of the tree and is good for understanding the contents.  
+# Heaps were much more complicated to me and I honestly struggled with them for a while. The key understanding came when I 
+# stopped trying to make the heap sort all elements and realized that the order of siblings is NOT part of the heap definion.  
+# Instead, the relationships between parent and child are the only ones that matter. One I got that figured out, it made 
+# more sense.  I also had to experiment greatly with understanding how to calculate the parent index.  I leveraged AI to help me to 
+# understand why just using index - 1 wasn't working.  As for why a heap is a good fit for a problem like the emergency queue, it 
+# is because it is always up to date with the answer.  You perform the calculation at the time of adding a new patient which 
+# needs to be fast but doesn't have the same urgency as getting the next patient needing care. The heap structure also makes it easy 
+# to "pop" the highest urgency patient.
